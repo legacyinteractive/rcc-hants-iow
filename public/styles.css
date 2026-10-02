@@ -688,7 +688,7 @@ img { display: block; max-width: 100%; }
   .brand-copy small { display: none; }
   .site-nav { gap: 14px; font-size: 13px; }
   .hero-motto { width: 112px; }
-  .hero-image { inset-left: 34%; }
+  .hero-image { inset: 0 0 0 34%; }
 }
 
 @media (max-width: 1080px) {
