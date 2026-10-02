@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "rcc-hants-iow-preview",
+  "name": "rcc-hants-iow",
   "compatibility_date": "2026-10-02",
   "assets": {
     "directory": "./public",
