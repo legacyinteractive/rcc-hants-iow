@@ -90,7 +90,9 @@ img { display: block; max-width: 100%; }
   object-fit: contain;
   object-position: center;
   flex: 0 0 auto;
-  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, .28)) saturate(.98) contrast(1.03);
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(239,217,159,.45), 0 5px 14px rgba(0,0,0,.28);
 }
 .brand-copy { display: flex; flex-direction: column; line-height: 1; min-width: 0; }
 .brand-copy strong {
@@ -513,6 +515,23 @@ img { display: block; max-width: 100%; }
 }
 .needles-image { display: none; }
 
+.map-legend {
+  display: none;
+}
+.map-legend span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.map-legend i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #8f1e35;
+  border: 2px solid #f5d98b;
+  flex: 0 0 auto;
+}
+
 .content-section {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(290px, 1fr);
@@ -678,7 +697,9 @@ img { display: block; max-width: 100%; }
   width: 70px;
   height: 70px;
   object-fit: contain;
-  filter: drop-shadow(0 4px 10px rgba(0,0,0,.28));
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(239,217,159,.35), 0 4px 12px rgba(0,0,0,.24);
 }
 .footer-brand strong {
   font-family: var(--serif);
@@ -759,6 +780,38 @@ img { display: block; max-width: 100%; }
 }
 
 @media (max-width: 760px) {
+  .map-card {
+    min-height: auto;
+    padding: 10px 0 18px;
+    grid-template-rows: auto auto;
+  }
+  .division-map {
+    width: 100%;
+    max-height: none;
+    padding: 8px 2px 0;
+  }
+  .division-map .pins text {
+    display: none;
+  }
+  .map-region-label {
+    font-size: 18px;
+  }
+  .map-island-label {
+    font-size: 9px;
+  }
+  .map-legend {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 8px 14px;
+    width: calc(100% - 28px);
+    margin: 8px 14px 0;
+    padding: 14px;
+    border-top: 1px solid rgba(239,217,159,.24);
+    color: #f5efe5;
+    font: 600 12px/1.25 var(--serif);
+  }
   .container { width: min(100% - 30px, 1180px); }
   .preview-banner { min-height: 34px; font-size: 10px; }
   .preview-banner span:last-child { display: none; }
