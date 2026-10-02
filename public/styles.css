@@ -298,8 +298,8 @@ img { display: block; max-width: 100%; }
 }
 .portrait-panel {
   background:
-    linear-gradient(0deg, rgba(16,12,10,.12), rgba(16,12,10,.01)),
-    url('/assets/ig-portrait.jpg') 50% 31% / cover no-repeat;
+    linear-gradient(0deg, rgba(16,12,10,.10), rgba(16,12,10,0)),
+    url('/assets/intendant-general-steven-groeger.webp?v=20261002-2222') 50% 24% / cover no-repeat;
   min-height: 355px;
 }
 .welcome-copy { padding: 43px clamp(34px, 4.6vw, 66px); }
@@ -852,7 +852,7 @@ img { display: block; max-width: 100%; }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 18px; }
 
   .welcome-grid { grid-template-columns: 1fr; }
-  .portrait-panel { min-height: 290px; background-position: center 24%; }
+  .portrait-panel { min-height: 290px; background-position: center 20%; }
   .welcome-copy { padding: 36px 25px 40px; }
   .welcome-copy h2 { font-size: 40px; }
   .welcome-copy h2 span { padding-left: 0; }
