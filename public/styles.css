@@ -443,56 +443,71 @@ img { display: block; max-width: 100%; }
 .map-card {
   position: relative;
   overflow: hidden;
+  display: grid;
+  place-items: center;
+  min-height: 390px;
   background:
-    linear-gradient(90deg, rgba(7,37,58,.96) 0%, rgba(7,37,58,.82) 34%, rgba(7,37,58,.42) 62%, rgba(7,37,58,.12) 100%),
-    radial-gradient(circle at 36% 40%, rgba(28,88,117,.55), transparent 44%),
-    #08253a;
-  border-left: 1px solid rgba(255,255,255,.05);
+    radial-gradient(circle at 42% 44%, rgba(26,78,104,.52), transparent 48%),
+    linear-gradient(135deg, #0a3148 0%, #062238 100%);
+  border-left: 1px solid rgba(255,255,255,.06);
 }
 .map-card::before {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 0;
   background-image:
-    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
-  background-size: 34px 34px;
-  opacity: .45;
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 36px 36px;
+  opacity: .32;
 }
-.map-card svg {
+.division-map {
   position: relative;
   z-index: 2;
-  width: min(100%, 690px);
-  height: 100%;
-  margin-left: 18px;
+  display: block;
+  width: 96%;
+  max-width: 780px;
+  height: auto;
+  max-height: 390px;
+  padding: 12px 18px;
+  overflow: visible;
 }
-.map-shape, .island {
-  fill: rgba(209,189,141,.9);
-  stroke: #ead7a6;
-  stroke-width: 2.25;
-  filter: drop-shadow(0 14px 24px rgba(0,0,0,.18));
+.map-shape {
+  fill: rgba(202,180,126,.93);
+  stroke: #efd99f;
+  stroke-width: 1.7;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  filter: drop-shadow(0 12px 22px rgba(0,0,0,.18));
 }
+.map-coastal-island { opacity: .92; }
+.map-isle-of-wight { fill: rgba(217,195,139,.96); }
 .pins circle {
-  fill: #99253a;
-  stroke: #f2d391;
-  stroke-width: 3;
+  fill: #8f1e35;
+  stroke: #f4d88c;
+  stroke-width: 2.5;
+  vector-effect: non-scaling-stroke;
 }
 .pins text {
-  fill: white;
+  fill: #fffaf0;
   font-family: var(--serif);
-  font-size: 15px;
+  font-size: 13px;
+  font-weight: 600;
   paint-order: stroke;
-  stroke: rgba(0,0,0,.45);
-  stroke-width: 3px;
+  stroke: rgba(6,25,38,.78);
+  stroke-width: 2.6px;
+  stroke-linejoin: round;
   letter-spacing: .01em;
 }
 .needles-image {
   position: absolute;
-  inset: 0 0 0 61%;
+  z-index: 1;
+  inset: 0 0 0 66%;
   background:
-    linear-gradient(90deg, rgba(8,37,58,.86) 0%, rgba(8,37,58,.38) 46%, rgba(8,37,58,.10) 100%),
-    url('/assets/needles.jpg') center / cover no-repeat;
-  opacity: .55;
+    linear-gradient(90deg, #082b40 0%, rgba(8,43,64,.72) 36%, rgba(8,43,64,.14) 100%),
+    url('/assets/needles.jpg') center/cover no-repeat;
+  opacity: .28;
 }
 
 .content-section {
@@ -734,8 +749,8 @@ img { display: block; max-width: 100%; }
   .order-inner { grid-template-columns: 1fr 1.35fr; }
   .order-inner .button { grid-column: 2; width: fit-content; }
   .conclaves { grid-template-columns: 42% 58%; }
-  .map-card svg { width: 100%; margin-left: 0; opacity: .96; }
-  .needles-image { opacity: .25; inset: 0; }
+  .division-map { width: 100%; max-height: 370px; padding: 14px 8px; }
+  .needles-image { opacity: .16; inset: 0; }
   .content-section { grid-template-columns: 1fr; }
   .events { border-left: 0; padding-left: 0; }
 }
@@ -791,8 +806,8 @@ img { display: block; max-width: 100%; }
   .conclave-copy { padding: 42px 24px 38px; }
   .conclave-copy h2 { font-size: 48px; }
   .map-card { min-height: 350px; }
-  .map-card svg { width: 100%; margin-left: 0; }
-  .needles-image { opacity: .18; inset: 0; }
+  .division-map { width: 100%; max-height: 340px; padding: 12px 4px; }
+  .needles-image { opacity: .12; inset: 0; }
   .pins text { font-size: 12px; }
 
   .content-section { gap: 42px; padding-block: 50px; }
