@@ -717,61 +717,84 @@ img { display: block; max-width: 100%; }
   gap: 18px;
 }
 .news-side-card {
+  position: relative;
   min-height: 218px;
-  display: grid;
-  grid-template-columns: 40% 60%;
   overflow: hidden;
-  background: rgba(255,255,255,.58);
-  border: 1px solid rgba(83,61,35,.11);
-  box-shadow: 0 10px 28px rgba(73,49,21,.055);
+  background: #231814;
+  border: 1px solid rgba(83,61,35,.12);
+  box-shadow: 0 10px 28px rgba(73,49,21,.075);
   transition: transform .2s ease, box-shadow .2s ease;
 }
 .news-side-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 34px rgba(73,49,21,.085);
+  box-shadow: 0 14px 34px rgba(73,49,21,.11);
 }
-.news-side-image { overflow: hidden; min-height: 100%; }
-.news-side-image img {
+.news-side-card > img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(.82) contrast(1.02);
-  transition: transform .4s ease;
+  filter: saturate(.82) contrast(1.04);
+  transition: transform .45s ease;
 }
-.news-side-card:hover img { transform: scale(1.035); }
-.news-side-card--service img {
+.news-side-card:hover > img { transform: scale(1.03); }
+.news-side-card--service > img {
   object-position: center 34%;
 }
-.news-side-card--abbys img {
+.news-side-card--abbys > img {
   object-position: center 42%;
 }
+.news-side-card .news-lead-shade {
+  z-index: 1;
+}
 .news-side-copy {
+  position: absolute;
+  z-index: 2;
+  inset: auto 0 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 20px 18px 18px;
+  padding: 22px 20px 20px;
+  color: white;
+}
+.news-side-card .news-meta {
+  color: #e8d8bf;
+}
+.news-side-card .news-tag {
+  color: #23170c;
+  background: var(--gold-light);
+  border-color: transparent;
 }
 .news-side-copy h3 {
-  margin: 0 0 8px;
+  margin: 0 0 7px;
   font-family: var(--serif);
-  font-size: 24px;
+  font-size: 25px;
   line-height: .98;
   font-weight: 600;
-  color: #291f19;
+  color: white;
 }
 .news-side-copy p {
-  margin: 0 0 14px;
+  margin: 0 0 13px;
   font-family: var(--serif);
-  font-size: 14px;
-  line-height: 1.38;
-  color: #6d6258;
+  font-size: 13px;
+  line-height: 1.35;
+  color: #eee5da;
 }
 .news-side-copy a {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
   margin-top: auto;
-  color: var(--burgundy);
-  border-bottom: 1px solid rgba(91,11,24,.25);
+  color: var(--gold-light);
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  font-size: 8px;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(237,211,154,.38);
   padding-bottom: 4px;
 }
+
 .events { border-left: 1px solid var(--line); padding-left: 31px; }
 .section-heading.compact h2 { font-size: 32px; }
 .event-row {
@@ -954,10 +977,10 @@ img { display: block; max-width: 100%; }
 }
 
 @media (max-width: 760px) {
-  .news-side-card--abbys img {
+  .news-side-card--abbys > img {
     object-position: center 38%;
   }
-  .news-side-card--service img {
+  .news-side-card--service > img {
     object-position: center 28%;
   }
   .news-lead--divisional img {
@@ -1071,10 +1094,10 @@ img { display: block; max-width: 100%; }
   .news-lead h3 { font-size: 34px; }
   .news-lead p { font-size: 15px; }
   .news-stack { grid-template-rows: none; }
-  .news-side-card { grid-template-columns: 34% 66%; min-height: 180px; }
-  .news-side-copy { padding: 16px 14px; }
-  .news-side-copy h3 { font-size: 22px; }
-  .news-side-copy p { font-size: 13px; }
+  .news-side-card { min-height: 320px; }
+  .news-side-copy { padding: 22px 20px 20px; }
+  .news-side-copy h3 { font-size: 30px; }
+  .news-side-copy p { font-size: 14px; }
   .section-heading.compact h2 { font-size: 30px; }
 
   .closing-strip { min-height: 310px; }
@@ -1101,7 +1124,7 @@ img { display: block; max-width: 100%; }
   .news-heading h2 { font-size: 33px; }
   .news-lead { min-height: 360px; }
   .news-lead h3 { font-size: 31px; }
-  .news-side-card { grid-template-columns: 1fr; }
-  .news-side-image { height: 155px; }
-  .news-side-copy { padding: 16px; }
+  .news-side-card { min-height: 330px; }
+  .news-side-copy { padding: 21px 18px 19px; }
+  .news-side-copy h3 { font-size: 28px; }
 }
