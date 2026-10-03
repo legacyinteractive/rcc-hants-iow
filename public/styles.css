@@ -739,6 +739,9 @@ img { display: block; max-width: 100%; }
   transition: transform .4s ease;
 }
 .news-side-card:hover img { transform: scale(1.035); }
+.news-side-card--service img {
+  object-position: center 34%;
+}
 .news-side-copy {
   display: flex;
   flex-direction: column;
@@ -948,6 +951,9 @@ img { display: block; max-width: 100%; }
 }
 
 @media (max-width: 760px) {
+  .news-side-card--service img {
+    object-position: center 28%;
+  }
   .news-lead--divisional img {
     object-position: center 24%;
   }
