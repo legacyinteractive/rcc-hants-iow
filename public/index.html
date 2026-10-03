@@ -10,9 +10,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=20261003-2217" />
+  <link rel="stylesheet" href="/styles.css?v=20261003-news01" />
 </head>
-<body data-preview-build="20261003-2217">
+<body data-preview-build="20261003-news01">
   <div class="preview-banner" role="status">
     <span class="preview-dot"></span>
     <strong>PREVIEW SITE · HOMEPAGE CONCEPT</strong>
@@ -133,32 +133,63 @@
 
     <section class="content-section container">
       <section class="news" id="news">
-        <div class="section-heading">
+        <div class="news-heading">
           <div>
             <p class="eyebrow burgundy">Latest News</p>
-            <h2>From around the Division</h2>
+            <h2>Stories from across the Division</h2>
+            <p class="news-intro">Faith, fellowship and service from our Conclaves across Hampshire and the Isle of Wight.</p>
           </div>
-          <a href="https://rcchantsandiow.org.uk/news2/" target="_blank" rel="noreferrer">View all news →</a>
+          <a class="news-all-link" href="https://rcchantsandiow.org.uk/news2/" target="_blank" rel="noreferrer">
+            <span>View all news</span><b aria-hidden="true">↗</b>
+          </a>
         </div>
-        <div class="news-grid">
-          <article class="news-card">
+
+        <div class="news-layout">
+          <article class="news-lead">
             <img src="/assets/news-church.jpg" alt="Church interior" />
-            <p class="date">27 Jun 2026</p>
-            <h3>Divisional Conclave meeting 2026</h3>
-            <p>The annual meeting brought members and visitors together at Botley for the Division’s AGM.</p>
+            <div class="news-lead-shade" aria-hidden="true"></div>
+            <div class="news-lead-content">
+              <div class="news-meta">
+                <span class="news-tag">Division</span>
+                <time datetime="2026-06-27">27 June 2026</time>
+              </div>
+              <h3>Divisional Conclave meeting 2026</h3>
+              <p>The annual meeting brought members and visitors together at Botley for the Division’s AGM.</p>
+              <a href="https://rcchantsandiow.org.uk/news2/" target="_blank" rel="noreferrer">Read the story <span aria-hidden="true">→</span></a>
+            </div>
           </article>
-          <article class="news-card">
-            <img src="/assets/news-cross.jpg" alt="Red Cross of Constantine ceremonial detail" />
-            <p class="date">19 Jun 2026</p>
-            <h3>Christian Orders Church Service</h3>
-            <p>Members of the Christian Orders and their families gathered at the Hospital of St. Cross in Winchester.</p>
-          </article>
-          <article class="news-card">
-            <img src="/assets/news-winchester.jpg" alt="Winchester landscape" />
-            <p class="date">27 May 2026</p>
-            <h3>Supporting local charities</h3>
-            <p>The Division continues to support good causes throughout Hampshire and the Isle of Wight.</p>
-          </article>
+
+          <div class="news-stack">
+            <article class="news-side-card">
+              <div class="news-side-image">
+                <img src="/assets/news-cross.jpg" alt="Red Cross of Constantine ceremonial detail" />
+              </div>
+              <div class="news-side-copy">
+                <div class="news-meta">
+                  <span class="news-tag">Service</span>
+                  <time datetime="2026-06-19">19 June 2026</time>
+                </div>
+                <h3>Christian Orders Church Service</h3>
+                <p>Members and their families gathered at the Hospital of St. Cross in Winchester.</p>
+                <a href="https://rcchantsandiow.org.uk/news2/" target="_blank" rel="noreferrer" aria-label="Read Christian Orders Church Service story">Read more <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <article class="news-side-card">
+              <div class="news-side-image">
+                <img src="/assets/news-winchester.jpg" alt="Winchester landscape" />
+              </div>
+              <div class="news-side-copy">
+                <div class="news-meta">
+                  <span class="news-tag">Charity</span>
+                  <time datetime="2026-05-27">27 May 2026</time>
+                </div>
+                <h3>Supporting local charities</h3>
+                <p>The Division continues to support good causes throughout Hampshire and the Isle of Wight.</p>
+                <a href="https://rcchantsandiow.org.uk/news2/" target="_blank" rel="noreferrer" aria-label="Read Supporting local charities story">Read more <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
