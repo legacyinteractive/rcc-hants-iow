@@ -742,6 +742,9 @@ img { display: block; max-width: 100%; }
 .news-side-card--service img {
   object-position: center 34%;
 }
+.news-side-card--abbys img {
+  object-position: center 42%;
+}
 .news-side-copy {
   display: flex;
   flex-direction: column;
@@ -951,6 +954,9 @@ img { display: block; max-width: 100%; }
 }
 
 @media (max-width: 760px) {
+  .news-side-card--abbys img {
+    object-position: center 38%;
+  }
   .news-side-card--service img {
     object-position: center 28%;
   }
